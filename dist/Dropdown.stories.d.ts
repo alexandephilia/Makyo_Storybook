@@ -1,0 +1,11 @@
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { Dropdown } from './Dropdown';
+declare const meta: Meta<typeof Dropdown>;
+export default meta;
+type Story = StoryObj<typeof Dropdown>;
+export declare const Basic: Story;
+export declare const MultiSelect: Story;
+export declare const Searchable: Story;
+export declare const CustomRendering: Story;
+export declare const Portal: Story;
+export declare const HighZIndex: Story;
