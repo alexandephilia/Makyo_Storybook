@@ -259,7 +259,7 @@ export function Dropdown({
   return (
     <div className={cx('relative w-full', className)} ref={ref}>
       {label && (
-        <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-1.5 ml-1">
+        <label className="block text-sm font-medium text-zinc-800 dark:text-zinc-200 mb-1.5 ml-1">
           {label}
         </label>
       )}
@@ -295,7 +295,7 @@ export function Dropdown({
                 />
               </span>
             )) : (
-              <span className="text-gray-900 dark:text-gray-100 text-sm">
+              <span className="text-zinc-800 dark:text-zinc-200 text-sm">
                 {selectedItems[0].label}
               </span>
             )

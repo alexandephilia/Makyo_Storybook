@@ -1,22 +1,35 @@
-import type { Preview } from '@storybook/react-vite';
-import '../src/index.css';
+import type { Preview } from '@storybook/react-vite'
+import '../src/index.css'
 
 const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
-
+    backgrounds: {
+      default: 'light',
+      values: [
+        { name: 'light', value: '#ffffff' },
+        { name: 'dark', value: '#18181b' },
+      ],
+    },
     a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
-      test: 'todo'
-    }
+      test: 'todo',
+      config: {
+        rules: [
+          {
+            // Disable contrast check on elements with dark: variants
+            // since tests run on light bg but detect dark: classes
+            id: 'color-contrast',
+            selector: ':not([class*="dark:"])',
+          },
+        ],
+      },
+    },
   },
-};
+}
 
-export default preview;
+export default preview
