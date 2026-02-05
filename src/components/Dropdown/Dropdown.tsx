@@ -300,7 +300,7 @@ export function Dropdown({
               </span>
             )
           ) : (
-            <span className="text-gray-500 text-sm truncate">{placeholder}</span>
+            <span className="text-gray-500 dark:text-gray-400 text-sm truncate">{placeholder}</span>
           )}
         </div>
         <div className="flex items-center gap-2">
