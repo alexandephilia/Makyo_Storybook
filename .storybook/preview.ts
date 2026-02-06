@@ -21,8 +21,6 @@ const preview: Preview = {
       config: {
         rules: [
           {
-            // Disable contrast check on elements with dark: variants
-            // since tests run on light bg but detect dark: classes
             id: 'color-contrast',
             selector: ':not([class*="dark:"])',
           },
